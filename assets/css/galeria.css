@@ -1,0 +1,175 @@
+@keyframes slidein {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  color: black;
+}
+
+body {
+  background-color: #02010a;
+  font-family: "Dancing Script", cursive;
+}
+
+.container {
+  margin: auto;
+  max-width: 900px;
+  animation-name: slidein;
+  animation-duration: 1s;
+}
+
+header {
+  background-color: #5b7989;
+  padding: 20px;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 22px;
+}
+
+header .title h1 {
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+}
+
+header nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+header nav a {
+  margin: 0 10px;
+}
+
+header nav a:active,
+header nav a.active {
+  text-decoration: none;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-white a {
+  color: white;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 3px #02010a;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.align-middle {
+  align-items: center;
+}
+
+.col,
+.col-4,
+.col-3 {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  box-shadow: 2px 2px 5px -2px #02010a;
+}
+
+.one-image {
+  padding: 10px;
+  background-color: #82c3a6;
+}
+
+.one-image img {
+  max-width: 90%;
+}
+
+.two-images,
+.gallery {
+  background-color: #d5c75f;
+  border: 1px solid #ffe100;
+}
+
+.gallery .col-4:first-child img {
+  filter: blur(10px);
+}
+
+.gallery .col-4:nth-child(even) img {
+  filter: grayscale(100%);
+}
+
+.gallery .col-4:nth-child(3) img {
+  filter: sepia(90%);
+}
+
+.two-images img {
+  border: 2px solid #02010a;
+  transition: transform 0.5s;
+}
+
+.two-images .col:first-child img:hover {
+  transform: rotate(10deg);
+}
+
+.two-images .col:last-child img:hover {
+  transform: translate(20px, -5px);
+}
+
+footer {
+  background-color: #c6d5c5;
+  border-radius: 0 0 10px 10px;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 900px) {
+  header .title {
+    display: inline-block;
+  }
+
+  header nav {
+    float: right;
+  }
+
+  .col {
+    width: 50%;
+  }
+
+  .col-4 {
+    width: 33.3%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .one-image {
+    padding: 40px;
+  }
+}
